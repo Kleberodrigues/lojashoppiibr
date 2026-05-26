@@ -9,7 +9,9 @@ interface Props {
 }
 
 const GRADE_LABEL: Record<string, string> = {
-  A: 'Perfeito', B: 'Leve uso', C: 'Usado', D: 'Avariado',
+  A: 'Perfeito',
+  B: 'Embalagem danificada ou pequenas avarias estéticas',
+  C: 'Avariado',
 }
 
 const GRADE_COLOR: Record<string, string> = {
@@ -176,9 +178,8 @@ export default function Catalogo({ onAdicionarAoCarrinho, onIrParaCarrinho, carr
         >
           <option value="">Todos os graus</option>
           <option value="A">Grau A — Perfeito</option>
-          <option value="B">Grau B — Leve uso</option>
-          <option value="C">Grau C — Usado</option>
-          <option value="D">Grau D — Avariado</option>
+          <option value="B">Grau B — Embalagem danificada / pequenas avarias</option>
+          <option value="C">Grau C — Avariado</option>
         </select>
       </div>
 
