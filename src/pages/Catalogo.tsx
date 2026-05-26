@@ -171,25 +171,25 @@ export default function Catalogo({ onAdicionarAoCarrinho, onIrParaCarrinho, carr
           onChange={handleGrade}
           className="border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-orange-400 bg-white"
         >
-          <option value="">Todos os graus</option>
-          <option value="A">Grau A — Perfeito</option>
-          <option value="B">Grau B — Embalagem danificada / pequenas avarias</option>
-          <option value="C">Grau C — Avariado</option>
+          <option value="">Todas as grades</option>
+          <option value="A">Grade A — Perfeito</option>
+          <option value="B">Grade B — Embalagem danificada / pequenas avarias</option>
+          <option value="C">Grade C — Avariado</option>
         </select>
       </div>
 
       {/* Legenda de grades */}
       <div className="mb-4 flex flex-wrap gap-3 text-xs">
         <span className="flex items-center gap-1.5">
-          <span className="bg-green-100 text-green-700 font-bold px-2 py-0.5 rounded-full">Grau A</span>
+          <span className="bg-green-100 text-green-700 font-bold px-2 py-0.5 rounded-full">Grade A</span>
           <span className="text-gray-500">Perfeito</span>
         </span>
         <span className="flex items-center gap-1.5">
-          <span className="bg-blue-100 text-blue-700 font-bold px-2 py-0.5 rounded-full">Grau B</span>
+          <span className="bg-blue-100 text-blue-700 font-bold px-2 py-0.5 rounded-full">Grade B</span>
           <span className="text-gray-500">Embalagem danificada ou pequenas avarias estéticas</span>
         </span>
         <span className="flex items-center gap-1.5">
-          <span className="bg-yellow-100 text-yellow-700 font-bold px-2 py-0.5 rounded-full">Grau C</span>
+          <span className="bg-yellow-100 text-yellow-700 font-bold px-2 py-0.5 rounded-full">Grade C</span>
           <span className="text-gray-500">Avariado</span>
         </span>
       </div>

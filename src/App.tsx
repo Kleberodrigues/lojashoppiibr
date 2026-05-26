@@ -49,7 +49,7 @@ export default function App() {
             onClick={() => setPagina('catalogo')}
             className="text-xl font-bold tracking-tight hover:opacity-90 transition-opacity"
           >
-            Oportunidade Achados
+            Achadinhos Shoppiibr
           </button>
           <button
             onClick={() => setPagina('carrinho')}
