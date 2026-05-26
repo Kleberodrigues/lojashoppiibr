@@ -48,10 +48,25 @@ function CardProduto({ produto, noCarrinho, onAdicionar }: {
       <div className="relative bg-gray-50" style={{ paddingBottom: '100%' }}>
         <div className="absolute inset-0">
           {produto.url_imagem_principal ? (
-            <img src={produto.url_imagem_principal} alt={produto.nome} className="w-full h-full object-cover" loading="lazy" />
-          ) : (
-            <div className="w-full h-full flex items-center justify-center text-gray-200 text-4xl">📦</div>
-          )}
+            <img
+              src={produto.url_imagem_principal}
+              alt={produto.nome}
+              className="w-full h-full object-cover"
+              loading="lazy"
+              onError={e => {
+                const img = e.currentTarget
+                img.style.display = 'none'
+                const fallback = img.nextElementSibling as HTMLElement
+                if (fallback) fallback.style.display = 'flex'
+              }}
+            />
+          ) : null}
+          <div
+            className="w-full h-full items-center justify-center text-gray-200 text-4xl"
+            style={{ display: produto.url_imagem_principal ? 'none' : 'flex' }}
+          >
+            📦
+          </div>
         </div>
         {desconto > 0 && (
           <span className="absolute top-2 left-2 text-white text-xs font-bold px-2 py-1 rounded-lg z-10"
