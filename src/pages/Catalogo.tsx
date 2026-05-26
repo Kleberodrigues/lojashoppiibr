@@ -8,11 +8,6 @@ interface Props {
   carrinhoIds: string[]
 }
 
-const GRADE_LABEL: Record<string, string> = {
-  A: 'Perfeito',
-  B: 'Embalagem danificada ou pequenas avarias estéticas',
-  C: 'Avariado',
-}
 
 const GRADE_COLOR: Record<string, string> = {
   A: 'bg-green-100 text-green-700',
