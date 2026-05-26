@@ -56,7 +56,7 @@ function CardProduto({ produto, noCarrinho, onAdicionar }: {
         )}
         {produto.grade && (
           <span className={`absolute top-2 right-2 text-xs font-bold px-2 py-1 rounded-full z-10 ${GRADE_COLOR[produto.grade] ?? 'bg-gray-100 text-gray-600'}`}>
-            Grau {produto.grade}
+            Grade {produto.grade}
           </span>
         )}
       </div>
