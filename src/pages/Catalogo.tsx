@@ -61,7 +61,7 @@ function CardProduto({ produto, noCarrinho, onAdicionar }: {
         )}
         {produto.grade && (
           <span className={`absolute top-2 right-2 text-xs font-bold px-2 py-1 rounded-full z-10 ${GRADE_COLOR[produto.grade] ?? 'bg-gray-100 text-gray-600'}`}>
-            {produto.grade} — {GRADE_LABEL[produto.grade] ?? produto.grade}
+            Grau {produto.grade}
           </span>
         )}
       </div>
@@ -181,6 +181,22 @@ export default function Catalogo({ onAdicionarAoCarrinho, onIrParaCarrinho, carr
           <option value="B">Grau B — Embalagem danificada / pequenas avarias</option>
           <option value="C">Grau C — Avariado</option>
         </select>
+      </div>
+
+      {/* Legenda de grades */}
+      <div className="mb-4 flex flex-wrap gap-3 text-xs">
+        <span className="flex items-center gap-1.5">
+          <span className="bg-green-100 text-green-700 font-bold px-2 py-0.5 rounded-full">Grau A</span>
+          <span className="text-gray-500">Perfeito</span>
+        </span>
+        <span className="flex items-center gap-1.5">
+          <span className="bg-blue-100 text-blue-700 font-bold px-2 py-0.5 rounded-full">Grau B</span>
+          <span className="text-gray-500">Embalagem danificada ou pequenas avarias estéticas</span>
+        </span>
+        <span className="flex items-center gap-1.5">
+          <span className="bg-yellow-100 text-yellow-700 font-bold px-2 py-0.5 rounded-full">Grau C</span>
+          <span className="text-gray-500">Avariado</span>
+        </span>
       </div>
 
       {/* Contador e link carrinho */}
